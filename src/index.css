@@ -1,13 +1,150 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.NavbarItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  height: 60px;
+  width: 100%;
+  background-color: black;
+  /* position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%); */
+}
+
+.navbar-logo {
+  cursor: pointer;
+  margin: 0;
+}
+
+.nav-menu {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 10px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-menu li a {
+  color: white;
+}
+
+.nav-menu .nav-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 360;
+  padding: 0.7rem 1rem;
+  white-space: nowrap;
+}
+
+.nav-menu .nav-link i {
+  padding-right: 10px;
+}
+
+.nav-menu .nav-link:hover {
+  color: orange;
+}
+
+.nav-link-mobile {
+  display: none;
+}
+
+.nav-menu button {
+  color: white;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 360;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  background-color: orange;
+}
+
+.nav-menu button:hover {
+  color: black;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+
+  .NavbarItem {
+    z-index: 99;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: black;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    margin: 0;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 2rem 0;
+  }
+
+  button {
+    display: none;
+  }
+
+  .nav-link-mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: auto;
+    border-radius: 4px;
+    width: 80%;
+    background: orange;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 360;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .menu-icon i {
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+  }
+}
+.home h1{
+  color: black;
+}
+.home-info{
+    display: grid;
+    grid-template-columns: 3;
 }
