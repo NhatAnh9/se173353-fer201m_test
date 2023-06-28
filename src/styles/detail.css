@@ -1,0 +1,30 @@
+.detail {
+    padding: 20px;
+  }
+  
+  .staff-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .staff-details img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .staff-details h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .staff-details p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  

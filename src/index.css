@@ -140,11 +140,5 @@
     color: white;
     cursor: pointer;
   }
-}
-.home h1{
-  color: black;
-}
-.home-info{
-    display: grid;
-    grid-template-columns: 3;
+
 }

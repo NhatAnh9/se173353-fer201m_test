@@ -1,12 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-
 import { Link } from 'react-router-dom';
-
-const Home = ({ staffData }) => {
-
-
-const [info, setInfo] = useState([]);
+import "../styles/home.css"
+const Home = () => {
+  const [info, setInfo] = useState([]);
 
   const fetchData = async () => {
     try {
@@ -24,21 +21,21 @@ const [info, setInfo] = useState([]);
   useEffect(() => {
     fetchData();
   }, []);
+
   return (
     <div className='home'>
-      <h1>Staff Members</h1>
       <ul className='home-info'>
         {info.map((staff) => (
           <li key={staff.id}>
-           
+            <div className="staff-info">
               <img src={staff.avatar} alt={staff.name} />
               <h2>{staff.name}</h2>
-            
-            <p>Age: {staff.age}</p>
-            <p>Address: {staff.address}</p>
-            <Link to={`/detail/${staff.id}`}>
-            <button>Details</button>
-            </Link>
+              <p>Age: {staff.age}</p>
+              <p>Address: {staff.address}</p>
+              <Link to={`/detail/${staff.id}`}>
+                <button>Details</button>
+              </Link>
+            </div>
           </li>
         ))}
       </ul>
